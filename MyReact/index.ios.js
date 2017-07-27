@@ -11,7 +11,7 @@ import {
 import React, {Component} from 'react';
 import FateListView from './FateListView';
 
-AppRegistry.registerComponent('TaSay45', () => IScrolledDownAndWhatHappenedNextShockedMe);
+AppRegistry.registerComponent('TaSay45', () => FlatListBasics);
 
 class HelloWorldApp extends Component {
   render() {
@@ -104,6 +104,15 @@ const styles = StyleSheet.create({
   },
   red: {
     color: 'red',
+  },
+    container: {
+   flex: 1,
+   paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
   },
 });
 
@@ -233,6 +242,19 @@ class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
         <Image source={require('./Images/praiseHlight.png')}/>
         <Text style={{fontSize:36}}>React Native</Text>
       </ScrollView>
+    );
+  }
+}
+
+class FlatListBasics extends Component {
+  render() {
+    return(
+      <View style={styles.container}>
+        <FlatList
+          data={[{key:'123'},{key:'122'},{key:'111'},{key:'888'}]}
+          renderIte={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        />
+      </View>
     );
   }
 }
