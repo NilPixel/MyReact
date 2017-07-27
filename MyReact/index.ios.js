@@ -10,7 +10,9 @@ import {
 
 import React, {Component} from 'react';
 import FateListView from './FateListView';
+import {
 
+} from 'react-navigation';
 AppRegistry.registerComponent('TaSay45', () => SectionListBasics);
 
 class HelloWorldApp extends Component {
