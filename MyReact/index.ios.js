@@ -252,7 +252,7 @@ class FlatListBasics extends Component {
       <View style={styles.container}>
         <FlatList
           data={[{key:'123'},{key:'122'},{key:'111'},{key:'888'}]}
-          renderIte={({item}) => <Text style={styles.item}>{item.key}</Text>}
+          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
       </View>
     );
