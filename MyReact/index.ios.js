@@ -5,13 +5,13 @@
  */
 
 import {
-    AppRegistry,Text,Image,View,StyleSheet,TextInput,ScrollView,FlatList
+    AppRegistry,Text,Image,View,StyleSheet,TextInput,ScrollView,FlatList,SectionList
 } from 'react-native';
 
 import React, {Component} from 'react';
 import FateListView from './FateListView';
 
-AppRegistry.registerComponent('TaSay45', () => FlatListBasics);
+AppRegistry.registerComponent('TaSay45', () => SectionListBasics);
 
 class HelloWorldApp extends Component {
   render() {
@@ -107,12 +107,22 @@ const styles = StyleSheet.create({
   },
     container: {
    flex: 1,
-   paddingTop: 22
+   paddingTop: 20
   },
   item: {
     padding: 10,
     fontSize: 18,
     height: 44,
+    backgroundColor: 'powderblue',
+  },
+  sectionHeader: {
+  paddingTop: 2,
+  paddingLeft: 10,
+  paddingRight: 10,
+  paddingBottom: 2,
+  fontSize: 14,
+  fontWeight: 'bold',
+  backgroundColor: 'rgba(247,247,247,1.0)',
   },
 });
 
@@ -255,6 +265,23 @@ class FlatListBasics extends Component {
           renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
       </View>
+    );
+  }
+}
+
+class SectionListBasics extends Component {
+  render() {
+    return(
+      <View style={styles.container}>
+        <SectionList
+          sections={[
+            {title: 'D', data: ['Devin']},
+            {title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},
+          ]}
+          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
+          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+        />
+     </View>
     );
   }
 }
