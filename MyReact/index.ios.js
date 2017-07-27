@@ -5,13 +5,13 @@
  */
 
 import {
-    AppRegistry,Text,Image,View,StyleSheet,TextInput
+    AppRegistry,Text,Image,View,StyleSheet,TextInput,ScrollView,FlatList
 } from 'react-native';
 
 import React, {Component} from 'react';
 import FateListView from './FateListView';
 
-AppRegistry.registerComponent('TaSay45', () => PizzaTranslator);
+AppRegistry.registerComponent('TaSay45', () => IScrolledDownAndWhatHappenedNextShockedMe);
 
 class HelloWorldApp extends Component {
   render() {
@@ -193,6 +193,46 @@ class PizzaTranslator extends Component {
           {this.state.text.split(' ').map((word) => word && '123').join(' ')}
         </Text>
       </View>
+    );
+  }
+}
+
+class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
+  render() {
+    return(
+      <ScrollView>
+        <Text style={{fontSize:36}}>Scroll me plz</Text>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Text style={{fontSize:36}}>If you like</Text>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Text style={{fontSize:36}}>Scrolling down</Text>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Text style={{fontSize:36}}>Framework around?</Text>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Text style={{fontSize:36}}>If you like</Text>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Image source={require('./Images/praiseHlight.png')}/>
+        <Text style={{fontSize:36}}>React Native</Text>
+      </ScrollView>
     );
   }
 }
